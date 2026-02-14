@@ -15,7 +15,7 @@
             letter-spacing: 0.25em;
         }
     </style>
-    <!-- Babel Standalone for browser-side TSX transpilation -->
+    <!-- Babel Standalone for in-browser transpilation -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="importmap">
 {
@@ -31,11 +31,7 @@
 </head>
 <body class="bg-[#fdfcf0] text-[#1a1a1a] min-h-screen">
     <div id="root"></div>
-    <!-- 
-      type="text/babel" tells Babel Standalone to process this script.
-      data-type="module" allows using native ES imports inside the script.
-      data-presets="react,typescript" enables JSX and TS parsing.
-    -->
-    <script type="text/babel" data-presets="react,typescript" data-type="module" src="index.tsx"></script>
+    <!-- Entry point with Babel configuration -->
+    <script type="text/babel" data-type="module" data-presets="react,typescript" src="index.tsx"></script>
 </body>
 </html>
