@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Phonology from './components/Phonology';
-import Orthography from './components/Orthography';
-import Grammar from './components/Grammar';
-import Criticism from './components/Criticism';
-import Dictionary from './components/Dictionary';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import About from './components/About.tsx';
+import Phonology from './components/Phonology.tsx';
+import Orthography from './components/Orthography.tsx';
+import Grammar from './components/Grammar.tsx';
+import Criticism from './components/Criticism.tsx';
+import Dictionary from './components/Dictionary.tsx';
+import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<'home' | 'phonology' | 'orthography' | 'grammar' | 'dictionary' | 'critique'>('home');
