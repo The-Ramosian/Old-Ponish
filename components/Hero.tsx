@@ -1,4 +1,3 @@
-
 import React, { useMemo } from 'react';
 
 const Hero: React.FC = () => {
@@ -12,7 +11,10 @@ const Hero: React.FC = () => {
   })), []);
 
   return (
-    <section className="relative py-32 flex flex-col items-center justify-center text-center px-4 bg-[#a3d5e8] overflow-hidden min-h-[50vh]">
+    <section 
+      className="relative py-32 flex flex-col items-center justify-center text-center px-4 bg-[#a3d5e8] overflow-hidden min-h-[50vh]"
+      spellCheck="false"
+    >
       <style>
         {`
           @keyframes twinkle {
