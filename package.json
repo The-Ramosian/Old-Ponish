@@ -1,9 +1,12 @@
 {
   "name": "old-ponish-landing-page",
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "description": "A linguistic landing page for the Old Ponish language reconstruction.",
   "type": "module",
+  "scripts": {
+    "build": "echo 'No build step required. Serving files directly from root.'"
+  },
   "dependencies": {
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
