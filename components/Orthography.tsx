@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 
 const Orthography: React.FC = () => {
@@ -76,7 +75,15 @@ const Orthography: React.FC = () => {
   };
 
   const output = useMemo(() => {
-    return input.toLowerCase().split('').map(char => conversionMap[char] || char).join('');
+    const lowerInput = input.toLowerCase();
+    const chars = lowerInput.split('');
+    return chars.map((char, index) => {
+      // Special rule: a becomes ᚨ (standard Ā) before n (ᚾ)
+      if (char === 'a' && chars[index + 1] === 'n') {
+        return 'ᚨ';
+      }
+      return conversionMap[char] || char;
+    }).join('');
   }, [input]);
 
   return (

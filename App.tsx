@@ -1,45 +1,47 @@
 import React, { useState } from 'react';
-import Navbar from './components/Navbar.tsx';
-import Hero from './components/Hero.tsx';
-import About from './components/About.tsx';
-import Phonology from './components/Phonology.tsx';
-import Orthography from './components/Orthography.tsx';
-import Grammar from './components/Grammar.tsx';
-import Criticism from './components/Criticism.tsx';
-import Dictionary from './components/Dictionary.tsx';
-import Footer from './components/Footer.tsx';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Phonology from './components/Phonology';
+import Orthography from './components/Orthography';
+import Grammar from './components/Grammar';
+import Criticism from './components/Criticism';
+import Dictionary from './components/Dictionary';
+import Footer from './components/Footer';
+
+type View = 'home' | 'phonology' | 'orthography' | 'grammar' | 'dictionary' | 'critique';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<'home' | 'phonology' | 'orthography' | 'grammar' | 'dictionary' | 'critique'>('home');
+  const [currentView, setCurrentView] = useState<View>('home');
 
-  const renderContent = () => {
-    switch (currentPage) {
-      case 'phonology':
-        return <Phonology />;
-      case 'orthography':
-        return <Orthography />;
-      case 'grammar':
-        return <Grammar />;
-      case 'dictionary':
-        return <Dictionary />;
-      case 'critique':
-        return <Criticism />;
+  const renderView = () => {
+    switch (currentView) {
       case 'home':
-      default:
         return (
           <>
             <Hero />
             <About />
           </>
         );
+      case 'phonology': return <Phonology />;
+      case 'orthography': return <Orthography />;
+      case 'grammar': return <Grammar />;
+      case 'dictionary': return <Dictionary />;
+      case 'critique': return <Criticism />;
+      default: return (
+        <>
+          <Hero />
+          <About />
+        </>
+      );
     }
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
+    <div className="flex flex-col min-h-screen bg-[#fdfcf0]">
+      <Navbar currentView={currentView} onNavigate={(view) => setCurrentView(view as View)} />
       <main className="flex-grow flex flex-col">
-        {renderContent()}
+        {renderView()}
       </main>
       <Footer />
     </div>

@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 
 const Converter: React.FC = () => {
@@ -19,7 +18,15 @@ const Converter: React.FC = () => {
   };
 
   const convertText = (text: string) => {
-    return text.toLowerCase().split('').map(char => mapping[char] || char).join('');
+    const lowerText = text.toLowerCase();
+    const chars = lowerText.split('');
+    return chars.map((char, index) => {
+      // Rule: ᛇ (a) becomes ᚨ (standard ā) before ᚾ (n)
+      if (char === 'a' && chars[index + 1] === 'n') {
+        return 'ᚨ';
+      }
+      return mapping[char] || char;
+    }).join('');
   };
 
   const output = useMemo(() => convertText(input), [input]);

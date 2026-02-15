@@ -1,15 +1,9 @@
-
-import React from 'react';
-
-interface NavbarProps {
-  onNavigate: (page: 'home' | 'phonology' | 'orthography' | 'grammar' | 'dictionary' | 'critique') => void;
-  currentPage: string;
-}
+import React, { useState } from 'react';
 
 const FlagIcon: React.FC = () => (
   <svg 
     viewBox="0 0 100 120" 
-    className="w-10 h-12 mr-4 drop-shadow-sm group-hover:scale-110 transition-transform duration-300"
+    className="w-10 h-12 drop-shadow-sm group-hover:scale-110 transition-transform duration-300"
     xmlns="http://www.w3.org/2000/svg"
   >
     {/* Flag Background */}
@@ -75,8 +69,16 @@ const FlagIcon: React.FC = () => (
   </svg>
 );
 
-const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
+interface NavbarProps {
+  currentView: string;
+  onNavigate: (view: string) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const navItems = [
+    { name: 'Home', id: 'home' },
     { name: 'Phonology', id: 'phonology' },
     { name: 'Orthography', id: 'orthography' },
     { name: 'Grammar', id: 'grammar' },
@@ -84,32 +86,61 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
     { name: 'Critique', id: 'critique' }
   ];
 
+  const handleNav = (id: string) => {
+    onNavigate(id);
+    setIsMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <nav className="border-b border-[#e2e8f0] flex items-center justify-between px-8 py-4 bg-[#fdfcf0]/80 backdrop-blur-sm sticky top-0 z-50">
-      <div 
-        className="flex items-center cursor-pointer group"
-        onClick={() => onNavigate('home')}
-      >
-        <FlagIcon />
-        <span className="text-2xl font-bold tracking-tight text-[#1e293b]">Old Ponish</span>
+    <nav className="border-b border-[#e2e8f0] bg-[#fdfcf0]/95 backdrop-blur-sm sticky top-0 z-50">
+      <div className="flex items-center justify-between px-6 py-3">
+        
+        {/* Left: Hamburger Menu */}
+        <button 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="p-2 text-[#1e293b] hover:bg-[#f1f5f9] rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#4c1d95]/20"
+          aria-label="Toggle Menu"
+        >
+          {isMenuOpen ? (
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
+        </button>
+
+        {/* Right: Brand Identity */}
+        <div 
+          className="flex items-center cursor-pointer group"
+          onClick={() => handleNav('home')}
+        >
+          <span className="text-xl md:text-2xl font-bold tracking-tight text-[#1e293b] mr-3 font-serif">Old Ponish</span>
+          <FlagIcon />
+        </div>
       </div>
-      <div className="hidden md:flex items-center gap-8">
-        {navItems.map((item) => (
-          <div
-            key={item.id}
-            onClick={() => {
-              onNavigate(item.id as any);
-            }}
-            className={`text-sm font-bold transition-colors duration-200 cursor-pointer uppercase tracking-widest ${
-              currentPage === item.id 
-                ? 'text-[#4c1d95] border-b-2 border-[#4c1d95]' 
-                : 'text-[#1e293b] hover:text-[#4c1d95]'
-            }`}
-          >
-            {item.name}
+
+      {/* Dropdown Menu */}
+      {isMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-[#fdfcf0] border-b border-[#e2e8f0] shadow-xl animate-in fade-in slide-in-from-top-1 duration-200 z-40">
+          <div className="flex flex-col py-4 px-6 gap-2 max-w-lg">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleNav(item.id)}
+                className={`text-left text-lg font-bold uppercase tracking-widest py-3 px-2 border-b border-dashed border-[#e2e8f0] last:border-0 hover:bg-[#f8fafc] hover:pl-4 transition-all duration-200
+                  ${currentView === item.id ? 'text-[#4c1d95] pl-2 border-l-4 border-l-[#4c1d95] border-b-transparent' : 'text-[#334155]'}
+                `}
+              >
+                {item.name}
+              </button>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </nav>
   );
 };

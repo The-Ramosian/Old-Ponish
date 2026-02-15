@@ -1,9 +1,0 @@
-[build]
-  command = "echo 'No build step required'"
-  publish = "."
-  functions = "netlify/functions"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
