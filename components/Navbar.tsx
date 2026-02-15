@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 const FlagIcon: React.FC = () => (
@@ -14,7 +15,7 @@ const FlagIcon: React.FC = () => (
       strokeWidth="2"
     />
     
-    {/* Stars Grid (Simplified Representation) */}
+    {/* Stars Grid */}
     <g fill="white">
       {[...Array(6)].map((_, r) => (
         [...Array(6)].map((_, c) => (
@@ -24,7 +25,6 @@ const FlagIcon: React.FC = () => (
     </g>
 
     {/* Central Elements */}
-    {/* Left Figure (Blue) */}
     <path 
       d="M35 30 Q20 40 25 70 Q40 85 45 75" 
       fill="none" 
@@ -36,8 +36,6 @@ const FlagIcon: React.FC = () => (
       d="M35 30 Q25 25 20 35" 
       fill="#7e22ce" 
     />
-
-    {/* Right Figure (White/Mint) */}
     <path 
       d="M65 30 Q80 40 75 70 Q60 85 55 75" 
       fill="none" 
@@ -49,8 +47,6 @@ const FlagIcon: React.FC = () => (
       d="M65 30 Q75 25 80 35" 
       fill="#5eead4" 
     />
-
-    {/* Sun */}
     <circle cx="50" cy="40" r="8" fill="#fde047" />
     <g stroke="#f97316" strokeWidth="1">
       {[...Array(8)].map((_, i) => (
@@ -62,19 +58,17 @@ const FlagIcon: React.FC = () => (
         />
       ))}
     </g>
-
-    {/* Moon */}
     <circle cx="50" cy="65" r="8" fill="#a855f7" />
     <circle cx="55" cy="65" r="8" fill="#a3d5e8" />
   </svg>
 );
 
 interface NavbarProps {
-  currentView: string;
   onNavigate: (view: string) => void;
+  currentView: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
+const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -82,6 +76,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
     { name: 'Phonology', id: 'phonology' },
     { name: 'Orthography', id: 'orthography' },
     { name: 'Grammar', id: 'grammar' },
+    { name: 'Literature', id: 'literature' },
     { name: 'Dictionary', id: 'dictionary' },
     { name: 'Critique', id: 'critique' }
   ];
@@ -131,9 +126,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate }) => {
               <button
                 key={item.id}
                 onClick={() => handleNav(item.id)}
-                className={`text-left text-lg font-bold uppercase tracking-widest py-3 px-2 border-b border-dashed border-[#e2e8f0] last:border-0 hover:bg-[#f8fafc] hover:pl-4 transition-all duration-200
-                  ${currentView === item.id ? 'text-[#4c1d95] pl-2 border-l-4 border-l-[#4c1d95] border-b-transparent' : 'text-[#334155]'}
-                `}
+                className={`text-left text-lg font-bold uppercase tracking-widest py-3 px-2 border-b border-dashed border-[#e2e8f0] last:border-0 hover:bg-[#f8fafc] hover:pl-4 transition-all duration-200 ${
+                  currentView === item.id ? 'text-[#4c1d95] border-l-4 border-l-[#4c1d95] pl-4' : 'text-[#334155]'
+                }`}
               >
                 {item.name}
               </button>

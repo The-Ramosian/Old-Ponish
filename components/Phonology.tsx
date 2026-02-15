@@ -3,8 +3,8 @@ import React from 'react';
 
 const Phonology: React.FC = () => {
   return (
-    <div className="max-w-6xl mx-auto px-8 py-20">
-      <h1 className="text-5xl font-bold text-[#1e293b] mb-12 text-center">Phonology of Old Ponish</h1>
+    <div className="max-w-6xl mx-auto px-8 py-20 border-t border-[#e2e8f0]">
+      <h2 className="text-5xl font-bold text-[#1e293b] mb-12 text-center">Phonology of Old Ponish</h2>
       
       <div className="prose prose-lg max-w-none text-[#334155] mb-16 italic font-medium">
         <p>
@@ -15,7 +15,7 @@ const Phonology: React.FC = () => {
       </div>
 
       <div className="mb-20">
-        <h2 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">Consonants</h2>
+        <h3 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">Consonants</h3>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse border border-[#cbd5e1] text-[#1e293b]">
             <thead className="bg-[#f1f5f9]">
@@ -115,7 +115,7 @@ const Phonology: React.FC = () => {
       </div>
 
       <div className="mb-20">
-        <h2 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">Vowels</h2>
+        <h3 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">Vowels</h3>
         <div className="overflow-x-auto max-w-2xl">
           <table className="w-full border-collapse border border-[#cbd5e1] text-[#1e293b]">
             <thead className="bg-[#f1f5f9]">

@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo } from 'react';
 
 const Orthography: React.FC = () => {
@@ -37,9 +38,6 @@ const Orthography: React.FC = () => {
     { glyph: 'Þþ', ipa: '/θ/' },
   ];
 
-  // Updated based on: ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛋᛏᛒᛖᛗᛚᛜᛟᛞᚣ
-  // ᚨ is now /ɑ:/ (Āā)
-  // ᛇ is now /æ/ (A)
   const runes = [
     { letter: 'F', rune: 'ᚠ', ipa: '/f/' },
     { letter: 'U', rune: 'ᚢ', ipa: '/u/' },
@@ -78,7 +76,6 @@ const Orthography: React.FC = () => {
     const lowerInput = input.toLowerCase();
     const chars = lowerInput.split('');
     return chars.map((char, index) => {
-      // Special rule: a becomes ᚨ (standard Ā) before n (ᚾ)
       if (char === 'a' && chars[index + 1] === 'n') {
         return 'ᚨ';
       }
@@ -87,8 +84,8 @@ const Orthography: React.FC = () => {
   }, [input]);
 
   return (
-    <div className="max-w-6xl mx-auto px-8 py-20">
-      <h1 className="text-5xl font-bold text-[#1e293b] mb-12 text-center uppercase tracking-widest">Orthography of Old Ponish</h1>
+    <div className="max-w-6xl mx-auto px-8 py-20 border-t border-[#e2e8f0]">
+      <h2 className="text-5xl font-bold text-[#1e293b] mb-12 text-center uppercase tracking-widest">Orthography of Old Ponish</h2>
       
       <div className="prose prose-lg max-w-none text-[#334155] mb-16 italic font-medium text-center">
         <p>
@@ -99,7 +96,7 @@ const Orthography: React.FC = () => {
       </div>
 
       <div className="mb-20">
-        <h2 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">Latin Character Key</h2>
+        <h3 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">Latin Character Key</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {letters.map((item, idx) => (
             <div key={idx} className="flex items-center justify-between p-4 bg-white border border-[#e2e8f0] shadow-sm rounded-sm hover:border-[#4c1d95] transition-colors">
@@ -111,7 +108,7 @@ const Orthography: React.FC = () => {
       </div>
 
       <div className="mb-20">
-        <h2 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">Rune Key</h2>
+        <h3 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">Rune Key</h3>
         <div className="bg-[#f8f7eb] p-8 border border-[#e2e8f0] rounded-sm">
           <p className="mb-8 text-[#334155]">
             In archaic contexts, Old Ponish is written using the <strong>Equestrian Futhorc</strong>. 
@@ -132,7 +129,7 @@ const Orthography: React.FC = () => {
       </div>
 
       <div className="mb-20 bg-white border-2 border-[#e2e8f0] p-8 rounded-sm shadow-sm">
-        <h2 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">Script Converter</h2>
+        <h3 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">Script Converter</h3>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="flex flex-col gap-3">
             <label className="text-sm font-bold text-[#4c1d95] uppercase tracking-widest">Latin Input</label>

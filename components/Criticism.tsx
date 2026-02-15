@@ -9,10 +9,10 @@ const Gloss: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 
 const Criticism: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-20 bg-[#fdfcf0]">
-      <h1 className="text-4xl md:text-5xl font-bold text-[#1e293b] mb-8 text-center uppercase tracking-[0.1em]">
+    <div className="max-w-4xl mx-auto px-8 py-20 bg-[#fdfcf0] border-t border-[#e2e8f0]">
+      <h2 className="text-4xl md:text-5xl font-bold text-[#1e293b] mb-8 text-center uppercase tracking-[0.1em]">
         Linguistic Criticism
-      </h1>
+      </h2>
       
       <div className="prose prose-lg max-w-none text-[#334155] space-y-8 leading-relaxed">
         <div className="bg-[#fefce8] border-l-4 border-yellow-400 p-6 italic mb-12 shadow-sm">
@@ -29,7 +29,7 @@ const Criticism: React.FC = () => {
 
 
         <section>
-          <h2 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Orthography</h2>
+          <h3 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Orthography</h3>
           <p>
             The orthography, or writing of Old Ponish, in my opinion, is terrible. It seems to <i>try</i> to be as close as English with words like <i>þou</i> and <i>ighþ</i>, but also has some contradictory statements such as <i>j</i> being pronounced as /j/ even though this is pronounced /d͡ʒ/ in English.
           </p>
@@ -42,7 +42,7 @@ const Criticism: React.FC = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Stress Patterns</h2>
+          <h3 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Stress Patterns</h3>
           <p>
             According to the dictionary, stress with 2 syllables have stress in the first syllable, like most Germanic languages, while &gt;3 syllables land on the penultimate syllable, this is not a typical Germanic language stress, where all words are stressed on the first syllable.
           </p>
@@ -52,12 +52,12 @@ const Criticism: React.FC = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Grammar</h2>
+          <h3 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Grammar</h3>
           <p>
             Due to this version's Old Ponish non naturalistic approach I'll give some slack. Though there are still some questionable things about its grammar.
           </p>
           
-          <h3 className="text-xl font-bold text-[#1e293b] mt-8 mb-4 italic">Verbs</h3>
+          <h4 className="text-xl font-bold text-[#1e293b] mt-8 mb-4 italic">Verbs</h4>
           <p>
             The verbs of Old Ponish are "too" regular. They are separated into 3 groups, -en, -a, and -an. The thing is, they are nearly identical. Here's a summary:
           </p>
@@ -134,7 +134,7 @@ const Criticism: React.FC = () => {
             While we're at it, it's quite weird that a Germanic language doesn't have Germanic strong verbs (think <i>fly</i> vs. <i>flew</i>). Here I'm going to reinstitute the balancing act of trying to make it intuitive for English speakers and also trying to make it unique at the same time. It's not intuitive for English speakers as they need to memorize these 'irregular' verbs (that could very much be regular), and It's not naturalistic either as this isn't how irregular verbs are formed. Again, it tries to get both and in turn, loses both. Additionally, <i>all</i> natural languages have irregularities (actual irregularities, not whatever that is), yes, even creoles/pidgins.
           </p>
 
-          <h3 className="text-xl font-bold text-[#1e293b] mt-8 mb-4 italic">Genitive Particles</h3>
+          <h4 className="text-xl font-bold text-[#1e293b] mt-8 mb-4 italic">Genitive Particles</h4>
           <p>
             Unlike most Germanic (and Indo-European) languages, Old Ponish uses particles for the genitive <Gloss>GEN</Gloss> case. It also has 3 of them: <b>a</b>, <b>se</b> and <b>ulf</b>.
           </p>
@@ -149,12 +149,12 @@ const Criticism: React.FC = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Vocabulary</h2>
+          <h3 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Vocabulary</h3>
           <p>
             This is probably the least plausible thing here, and I want to ask the people creating the language's dictionary: Is Old Ponish Anglo-Frisian or not? Because you can't have <i>mouþ</i> (Ingvaeonic Spirant Law), but also <i>wier</i> (ʀ from *wiʀ seems to have dropped in Ingvaeonic) and <i>waeg</i> (with a hard g, in contrast to English <i>way</i> and Old Frisian <i>wei</i>).
           </p>
           
-          <h3 className="text-xl font-bold text-[#1e293b] mt-8 mb-4 italic">Loan Words</h3>
+          <h4 className="text-xl font-bold text-[#1e293b] mt-8 mb-4 italic">Loan Words</h4>
           <p>
             Old Ponish, like any language, is not isolated. The problem is, some of the words don't make any sense within its timeline:
           </p>
@@ -169,7 +169,7 @@ const Criticism: React.FC = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Its backstory makes little sense linguistically</h2>
+          <h3 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Its backstory makes little sense linguistically</h3>
           <p>
             Old Ponish at oldponish.netlify.app is a creole. According to its backstory, Old Ponish is a mix of 3 groups: Latin/Ancient Greek by the Pegasi, Old French for the unicorns, and... What exactly for the Earth Ponies? Why is Old Ponish a mix of 2 natural languages and 1 conlang?
           </p>
@@ -179,7 +179,7 @@ const Criticism: React.FC = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Then if my version is "superior", then why isn't mine more popular?</h2>
+          <h3 className="text-2xl font-bold text-[#1e293b] uppercase tracking-widest mt-12 mb-4 border-b border-[#e2e8f0] pb-2">Then if my version is "superior", then why isn't mine more popular?</h3>
           <p>There are two contributing factors to this:</p>
           <ol className="list-decimal pl-8 space-y-4">
             <li><b>Mine isn't as old.</b> The alternative was made in 2018. Mine was created just in 2024.</li>

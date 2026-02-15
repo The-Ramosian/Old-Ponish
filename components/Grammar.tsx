@@ -31,15 +31,15 @@ const Table: React.FC<{ title?: string; headers: string[]; rows: string[][] }> =
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
   <section className="mb-16">
-    <h2 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">{title}</h2>
+    <h3 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">{title}</h3>
     {children}
   </section>
 );
 
 const Grammar: React.FC = () => {
   return (
-    <div className="max-w-6xl mx-auto px-8 py-20">
-      <h1 className="text-5xl font-bold text-[#1e293b] mb-4 text-center">Quick Grammar Guide</h1>
+    <div className="max-w-6xl mx-auto px-8 py-20 border-t border-[#e2e8f0]">
+      <h2 className="text-5xl font-bold text-[#1e293b] mb-4 text-center">Quick Grammar Guide</h2>
       <p className="text-xl text-center text-[#64748b] mb-16 italic">By The Ramosian</p>
 
       <Section title="Nouns">
@@ -149,7 +149,7 @@ const Grammar: React.FC = () => {
       </Section>
 
       <Section title="Pronouns">
-        <h3 className="text-2xl font-bold text-[#1e293b] mb-6">Pony Pronouns</h3>
+        <h4 className="text-2xl font-bold text-[#1e293b] mb-6">Pony Pronouns</h4>
         <Table headers={['Case', '1st Person', '2nd Person', '3rd Person (m/f/n)']} 
           title="Singular"
           rows={[
@@ -183,7 +183,7 @@ const Grammar: React.FC = () => {
           </ul>
         </div>
 
-        <h3 className="text-2xl font-bold text-[#1e293b] mb-6">Reflexive Pronouns</h3>
+        <h4 className="text-2xl font-bold text-[#1e293b] mb-6">Reflexive Pronouns</h4>
         <p className="mb-4 text-[#475569]">Formed by compounding the accusative pronoun + <em>sielf</em>.</p>
         <Table headers={['Person', 'Singular', 'Dual', 'Plural']} 
           rows={[
@@ -196,7 +196,7 @@ const Grammar: React.FC = () => {
 
       <Section title="Articles & Demonstratives">
         <div className="mb-8">
-          <h3 className="text-2xl font-bold text-[#1e293b] mb-4">Articles (A, An, The)</h3>
+          <h4 className="text-2xl font-bold text-[#1e293b] mb-4">Articles (A, An, The)</h4>
           <p className="mb-4 text-[#334155]">Old Ponish uses both indefinite and definite articles. They must agree with the noun in case, number, and gender.</p>
           <Table headers={['Case', 'Sg. Masc.', 'Sg. Fem.', 'Sg. Neut.', 'Pl. Masc.', 'Pl. Fem.', 'Pl. Neut.']} 
             rows={[
@@ -207,7 +207,7 @@ const Grammar: React.FC = () => {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold text-[#1e293b] mb-4">Demonstratives</h3>
+          <h4 className="text-2xl font-bold text-[#1e293b] mb-4">Demonstratives</h4>
           <Table headers={['Type', 'Singular', 'Plural']} 
             rows={[
               ['Proximal (This)', 'þis', 'þies'],
@@ -258,7 +258,7 @@ const Grammar: React.FC = () => {
           />
         </div>
 
-        <h3 className="text-2xl font-bold text-[#1e293b] mb-6">Comparative & Superlatives</h3>
+        <h4 className="text-2xl font-bold text-[#1e293b] mb-6">Comparative & Superlatives</h4>
         <Table headers={['Base Adjective', 'Comparative', 'Superlative']} 
           rows={[
             ['daegul (secret)', 'daegulra', 'daegulmest'],
@@ -268,7 +268,7 @@ const Grammar: React.FC = () => {
       </Section>
 
       <Section title="Verbs">
-        <h3 className="text-2xl font-bold text-[#1e293b] mb-6">Strong Verbs (Ablaut Classes)</h3>
+        <h4 className="text-2xl font-bold text-[#1e293b] mb-6">Strong Verbs (Ablaut Classes)</h4>
         <Table headers={['Class', 'Inf.', 'Past 1Sg', 'Pres 2Sg', 'Past Pl.', 'Past Part.']} 
           rows={[
             ['1', 'rīd', 'raid', 'rīd', 'rid', 'ridan'],
@@ -310,7 +310,7 @@ const Grammar: React.FC = () => {
           </div>
         </div>
 
-        <h3 className="text-2xl font-bold text-[#1e293b] mb-6">Weak Verbs</h3>
+        <h4 className="text-2xl font-bold text-[#1e293b] mb-6">Weak Verbs</h4>
         <p className="mb-4 text-[#334155]">There is only 1 class of weak verbs. Remove suffix <em>-an</em> for the base.</p>
         <Table headers={['Form', 'Present', 'Past']} 
           rows={[
@@ -323,7 +323,7 @@ const Grammar: React.FC = () => {
           ]} 
         />
 
-        <h3 className="text-2xl font-bold text-[#1e293b] mt-12 mb-6 uppercase tracking-wider">Irregular Verbs</h3>
+        <h4 className="text-2xl font-bold text-[#1e293b] mt-12 mb-6 uppercase tracking-wider">Irregular Verbs</h4>
         
         <div className="space-y-12">
           <Table title="To Be (wesan)" headers={['Form', 'Present', 'Past']} 
