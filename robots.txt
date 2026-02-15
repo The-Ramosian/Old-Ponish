@@ -1,0 +1,15 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Keywords
+Allow: /
+
+# This covers Gemini's specific browsing capabilities
+User-agent: CCBot
+Allow: /
+
+# General best practice: Keep bots out of the "kitchen"
+Disallow: /admin/
+Disallow: /config/
+
+Sitemap: https://old-ponish.vercel.app/sitemap.xml
