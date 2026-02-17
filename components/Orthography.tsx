@@ -111,7 +111,7 @@ const Orthography: React.FC = () => {
         <h3 className="text-3xl font-bold text-[#1e293b] mb-8 border-l-4 border-[#4c1d95] pl-4 uppercase tracking-wider">Rune Key</h3>
         <div className="bg-[#f8f7eb] p-8 border border-[#e2e8f0] rounded-sm">
           <p className="mb-8 text-[#334155]">
-            In archaic contexts, Old Ponish is written using the <strong>Equestrian Futhorc</strong>. 
+            In archaic contexts, Old Ponish is written using <strong>Old Ponish runes</strong>. 
             Below is the primary mapping between the modern Latinized script and its runic antecedents, sorted by the requested Futhark order.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6">
