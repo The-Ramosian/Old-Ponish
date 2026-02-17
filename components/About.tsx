@@ -43,7 +43,7 @@ const About: React.FC = () => {
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-[#1e293b] uppercase tracking-[0.2em] mb-12">About Old Ponish</h2>
           <p className="text-xl leading-relaxed text-justify md:text-center text-[#334155] italic font-medium opacity-90">
-            Old Ponish is a postriori conlang which was made in an attempt to reconstruct a language from the show <strong>My Little Pony: Friendship is Magic</strong>. This conlang was created and is being maintained by <strong>The Ramosian</strong>. We have few lines to work with in the show, primarily originating from Season 7 Episode 24. The language is structurally assumed to be a <strong>West Germanic Language</strong>. The language was (and still is) hosted on Conworkshop, but because of Conworkshop's gated content, The Ramosian has moved the most basic stuff into this website.
+            Old Ponish is a postriori conlang which was made in an attempt to reconstruct a language from the show <strong>My Little Pony: Friendship is Magic</strong>. This conlang was created and is being maintained by <strong>The Ramosian</strong>. We have few lines to work with in the show, primarily originating from Season 7 Episode 24. The language is structurally assumed to be a <strong>West Germanic Language</strong>. The language was (and still is) hosted on <a href="https://conworkshop.com/dictionary.php?L=OLDP" target="_blank" rel="noopener noreferrer" className="text-[#4c1d95] font-bold hover:underline">Conworkshop</a>, but because of Conworkshop's gated content, The Ramosian has moved the most basic stuff into this website.
           </p>
         </div>
 
