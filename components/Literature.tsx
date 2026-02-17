@@ -41,6 +41,7 @@ const Literature: React.FC = () => {
               rune="ᚻᛚᛁᛖᛏ"
               ponish="Hliet foresettan pliht!"
               translation="Reward prefers risk!"
+              literal="They reward to prefer risk"
             />
           </div>
         </section>
@@ -121,7 +122,7 @@ const Literature: React.FC = () => {
             </div>
 
             <ProseCard 
-              title="Winter Greeting"
+              title="Universal Germanic Dialogue"
               ponish={[
                 "Se ćaeld winter is nāehw, ain snaiwsturm wiell cwimd. Cwim in mīn waerm hūs mīn win. Welćem! Cwim hēr, siew and saelta, et and drinc. Þat is mīn rād. Wi habbiāþ water, beur, and meluc hwilīć is frisć frām þan ca, O, and waerm sopa!"
               ]}
