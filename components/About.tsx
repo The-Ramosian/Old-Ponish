@@ -41,7 +41,7 @@ const About: React.FC = () => {
       <div className="max-w-6xl mx-auto px-8">
         {/* Original Position Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#1e293b] uppercase tracking-[0.2em] mb-12">About Old Ponish</h2>
+          <h1 className="text-4xl font-bold text-[#1e293b] uppercase tracking-[0.2em] mb-12">About Old Ponish</h1>
           <p className="text-xl leading-relaxed text-justify md:text-center text-[#334155] italic font-medium opacity-90">
             Old Ponish is a postriori conlang which was made in an attempt to reconstruct a language from the show <strong>My Little Pony: Friendship is Magic</strong>. This conlang was created and is being maintained by <strong>The Ramosian</strong>. We have few lines to work with in the show, primarily originating from Season 7 Episode 24. The language is structurally assumed to be a <strong>West Germanic Language</strong>. The language was (and still is) hosted on <a href="https://conworkshop.com/dictionary.php?L=OLDP" target="_blank" rel="noopener noreferrer" className="text-[#4c1d95] font-bold hover:underline">Conworkshop</a>, but because of Conworkshop's gated content, The Ramosian has moved the most basic stuff into this website.
           </p>
@@ -50,7 +50,7 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start border-t border-[#e2e8f0] pt-16 mb-24">
           {/* Tree Section */}
           <div className="flex flex-col items-center">
-            <h3 className="text-xl font-bold text-[#1e293b] mb-12 uppercase tracking-[0.3em] opacity-80 border-b-2 border-[#4c1d95]/20 pb-2">Linguistic Lineage</h3>
+            <h2 className="text-xl font-bold text-[#1e293b] mb-12 uppercase tracking-[0.3em] opacity-80 border-b-2 border-[#4c1d95]/20 pb-2">Linguistic Lineage od Old Ponish</h2>
             <div className="flex flex-col items-center w-full space-y-0">
               <TreeItem name="Proto-Indo-European" />
               <TreeItem name="Proto-Germanic" />
@@ -63,7 +63,7 @@ const About: React.FC = () => {
 
           {/* Disclaimer Section */}
           <div className="flex flex-col h-full">
-            <h3 className="text-xl font-bold text-[#1e293b] mb-12 uppercase tracking-[0.3em] opacity-80 border-b-2 border-[#4c1d95]/20 pb-2">Disclaimer</h3>
+            <h2 className="text-xl font-bold text-[#1e293b] mb-12 uppercase tracking-[0.3em] opacity-80 border-b-2 border-[#4c1d95]/20 pb-2">Disclaimer</h2>
             <div className="bg-white/50 p-8 border border-[#e2e8f0] rounded-sm shadow-sm h-full flex flex-col justify-start">
               <p className="text-base leading-relaxed text-[#475569] mb-4">
                 This version of the language is not affiliated with or related to the <a href="https://oldponish.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-[#4c1d95] font-bold hover:underline">Other Old Ponish</a> project, woth the primary difference being this version is fully naturalistic. Therefore, this you can expect that this version's grammar is significaly more complicated than the other reconstruction.
