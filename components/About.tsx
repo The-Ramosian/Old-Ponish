@@ -50,7 +50,7 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start border-t border-[#e2e8f0] pt-16 mb-24">
           {/* Tree Section */}
           <div className="flex flex-col items-center">
-            <h2 className="text-xl font-bold text-[#1e293b] mb-12 uppercase tracking-[0.3em] opacity-80 border-b-2 border-[#4c1d95]/20 pb-2">Linguistic Lineage od Old Ponish</h2>
+            <h2 className="text-xl font-bold text-[#1e293b] mb-12 uppercase tracking-[0.3em] opacity-80 border-b-2 border-[#4c1d95]/20 pb-2">Linguistic Lineage of Old Ponish</h2>
             <div className="flex flex-col items-center w-full space-y-0">
               <TreeItem name="Proto-Indo-European" />
               <TreeItem name="Proto-Germanic" />
